@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Bienvenidos a Tres en linea");
         System.out.println("Selecciona la opcion deseada");
 
-        int response = 0;
+        int opcion = 0;
         do{
             System.out.println("1. Nueva partida");
             System.out.println("2. Cargar partida");
@@ -16,17 +16,17 @@ public class Main {
             System.out.println("4. Salir");
 
             Scanner sc = new Scanner(System.in);
-            response = Integer.valueOf(sc.nextLine());
+            opcion = sc.nextInt();
 
-            switch (response){
+            switch (opcion){
                 case 1:
                     System.out.println("Empezo la partida");
                     break;
                 case 2:
-                    System.out.println("Cargandoo");
+                    System.out.println("Cargando");
                     break;
                 case 3:
-                    System.out.println("Configuraciion");
+                    System.out.println("Configuracion");
                     break;
                 case 4:
                     System.out.println("Gracias por visitarnos");
@@ -34,6 +34,6 @@ public class Main {
                 default:
                     System.out.println("Elija una opcion correcta");
             }
-        }while (response!=4);
+        }while (opcion!=4);
     }
 }
