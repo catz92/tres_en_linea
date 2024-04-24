@@ -12,7 +12,7 @@ public class Main {
         do{
             System.out.println("1. Nueva partida");
             System.out.println("2. Cargar partida");
-            System.out.println("3. Configuracion");
+            System.out.println("3. Configuración");
             System.out.println("4. Salir");
 
             Scanner sc = new Scanner(System.in);
