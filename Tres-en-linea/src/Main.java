@@ -26,10 +26,10 @@ public class Main {
                     cargapartida();
                     break;
                 case 3:
-                    System.out.println("Configuracion");
+                   configuracion();
                     break;
                 case 4:
-                    System.out.println("Gracias por visitarnos");
+                    salir();
                     break;
                 default:
                     System.out.println("Elija una opcion correcta");
@@ -42,5 +42,12 @@ public class Main {
 
     private static void nuevapartida() {
 
+    }
+
+    private static void salir() {
+
+    }
+
+    private static void configuracion() {
     }
 }
