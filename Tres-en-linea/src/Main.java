@@ -20,10 +20,10 @@ public class Main {
 
             switch (opcion){
                 case 1:
-                    System.out.println("Empezo la partida");
+                    nuevapartida();
                     break;
                 case 2:
-                    System.out.println("Cargando");
+                    cargapartida();
                     break;
                 case 3:
                     System.out.println("Configuracion");
@@ -35,5 +35,12 @@ public class Main {
                     System.out.println("Elija una opcion correcta");
             }
         }while (opcion!=4);
+    }
+
+    private static void cargapartida() {
+    }
+
+    private static void nuevapartida() {
+
     }
 }
