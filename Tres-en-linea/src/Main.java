@@ -26,14 +26,21 @@ public class Main {
                     System.out.println("Cargando");
                     break;
                 case 3:
-                    System.out.println("Configuracion");
+                   configuracion();
                     break;
                 case 4:
-                    System.out.println("Gracias por visitarnos");
+                    salir();
                     break;
                 default:
                     System.out.println("Elija una opcion correcta");
             }
         }while (opcion!=4);
+    }
+
+    private static void salir() {
+
+    }
+
+    private static void configuracion() {
     }
 }
