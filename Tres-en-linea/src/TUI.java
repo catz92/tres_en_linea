@@ -31,7 +31,7 @@ public class TUI {
     }
 
     public void mostrarTablero(char tablero[], short turno) {
-
+        throw new NotImplementedException();
     }
 
     public short[] recogerJugada() {
@@ -40,6 +40,10 @@ public class TUI {
     }
 
     public void finDePartida(short ganador) {
+        throw new NotImplementedException();
 
     }
+
+
 }
+

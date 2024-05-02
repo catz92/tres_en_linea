@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args) {
         TUI tui = new TUI();
         Juego joc = new Juego();
+
         int resultado = tui.mostrarMenu();
         System.out.print(resultado);
         switch (resultado){
