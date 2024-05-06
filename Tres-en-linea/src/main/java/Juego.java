@@ -1,5 +1,16 @@
 public class Juego {
 
+private char [] tabla;
+private int turn;
+
+    public char[] getTabla() {
+        return tabla;
+    }
+
+    public int getTurn() {
+        return turn;
+    }
+
     public void nuevaPartida(){
         throw new NotImplementedException();
     }
