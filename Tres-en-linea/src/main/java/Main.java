@@ -5,9 +5,9 @@ public class Main {
     public static void main(String[] args) {
         TUI tui = new TUI();
         Juego joc = new Juego();
-//        joc.nuevaPartida();
-//        joc.jugar(0,0);
-//        System.out.println(Arrays.deepToString(joc.getTabla()));
+        joc.nuevaPartida();
+        joc.jugar(0,0);
+        System.out.println(Arrays.deepToString(joc.getTabla()));
 
         int resultado = tui.mostrarMenu();
         System.out.print(resultado);
@@ -27,7 +27,7 @@ public class Main {
         }
     }
     private static void nuevapartida() {
-        System.out.println("llegamos a nueva partida");
+
     }
 
     private static void cargapartida() {
