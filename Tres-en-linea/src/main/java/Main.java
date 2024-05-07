@@ -1,7 +1,13 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         TUI tui = new TUI();
         Juego joc = new Juego();
+//        joc.nuevaPartida();
+//        joc.jugar(0,0);
+//        System.out.println(Arrays.deepToString(joc.getTabla()));
 
         int resultado = tui.mostrarMenu();
         System.out.print(resultado);
