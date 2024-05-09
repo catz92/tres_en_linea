@@ -30,7 +30,7 @@ public class TUI {
         return opcion;
     }
 
-    public void mostrarTablero(char tablero[], short turno) {
+    public void mostrarTablero(char tablero[][], short turno) {
         throw new NotImplementedException();
     }
 
