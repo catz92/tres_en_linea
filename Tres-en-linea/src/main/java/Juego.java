@@ -3,13 +3,13 @@ import java.lang.reflect.Array;
 public class Juego {
 
 private char [][] tablero;
-private int turn;
+private short turn;
 
     public char[][] getTabla() {
         return tablero;
     }
 
-    public int getTurn() {
+    public short getTurn() {
         return turn;
     }
 
@@ -18,15 +18,21 @@ private int turn;
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero.length; j++) {
                 tablero[i][j] = '-';
-                System.out.print(tablero[i][j] + " ");
             }
-            System.out.println();
+            turn = 1;
         }
 
     }
 
     public void jugar(int fila, int columna){
-        tablero [fila][columna] = 'X';
+        if (turn % 2 ==1){
+            tablero[fila][columna]='0';
+        }
+        else {
+            tablero[fila][columna]='X';
+        }
+        turn ++;
+
     }
 
     public boolean jugadaGanadora(short fila, short columna){

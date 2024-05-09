@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        //instanciamos las clases TUI y Juego
         TUI tui = new TUI();
         Juego joc = new Juego();
 //        joc.nuevaPartida();
@@ -10,10 +11,14 @@ public class Main {
 //        System.out.println(Arrays.deepToString(joc.getTabla()));
 
         int resultado = tui.mostrarMenu();
-        System.out.print(resultado);
+
+
+        //llamada de los metodos e invocarlos "metodo intermediario"
         switch (resultado){
             case 1:
-                nuevapartida();
+                nuevapartida();//pide a la clase juego una nueva partida
+                                //este pediria el tablero a "Juego" y le pedira a el tui que muestre el tablero.
+                                //luego pedira jugada a "TUI" y mandandosela a Juego en un bucle hasta el fin de la partida.
                 break;
             case 2:
                 cargapartida();
