@@ -31,11 +31,25 @@ public class TUI {
     }
 
     public void mostrarTablero(char tablero[][], short turno) {
-        throw new NotImplementedException();
+        for (int i = 0; i < tablero.length; i++) {
+            for (int j = 0; j < tablero.length; j++) {
+                System.out.print(tablero [i][j] + " ");
+            }
+            System.out.println(" ");
+        }
+        System.out.println("turno: " + turno);
     }
 
     public short[] recogerJugada() {
-        short[] ejemplo = new short[1];
+        short[] ejemplo = new short[2];
+        System.out.println("Fila");
+        short fila;
+        fila = sc.nextShort();
+        System.out.println("Columna");
+        short columna;
+        columna = sc.nextShort();
+        ejemplo[0]= fila;
+        ejemplo[1]= columna;
         return ejemplo;
     }
 
