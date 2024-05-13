@@ -3,23 +3,17 @@ import java.util.Scanner;
 
 public class Main {
     //Instanciamos de las clases juego y tui fuera de metodo main
-    static TUI tui = new TUI();
-    static Juego joc = new Juego();
 
     public static void main(String[] args) {
-        //instanciamos las clases TUI y Juego
 
-
+        TUI tui = new TUI();
+        Juego joc = new Juego();
 
         int resultado = tui.mostrarMenu();
 
-
-        //llamada de los metodos e invocarlos "metodo intermediario"
         switch (resultado){
             case 1:
-                nuevapartida();//pide a la clase juego una nueva partida
-                                //este pediria el tablero a "Juego" y le pedira a el tui que muestre el tablero.
-                                //luego pedira jugada a "TUI" y mandandosela a Juego en un bucle hasta el fin de la partida.
+                nuevapartida(joc, tui);
                 break;
             case 2:
                 cargapartida();
@@ -32,7 +26,7 @@ public class Main {
                 break;
         }
     }
-    public static void nuevapartida() {
+    public static void nuevapartida(Juego joc, TUI tui) {
         joc.nuevaPartida();
         tui.mostrarTablero(joc.getTabla(), joc.getTurn());
         tui.recogerJugada();
