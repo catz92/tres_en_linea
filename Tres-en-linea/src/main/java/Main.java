@@ -2,13 +2,14 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
+    //Instanciamos de las clases juego y tui fuera de metodo main
+    static TUI tui = new TUI();
+    static Juego joc = new Juego();
+
     public static void main(String[] args) {
         //instanciamos las clases TUI y Juego
-        TUI tui = new TUI();
-        Juego joc = new Juego();
-        joc.nuevaPartida();
-        joc.jugar(0,0);
-        System.out.println(Arrays.deepToString(joc.getTabla()));
+
+
 
         int resultado = tui.mostrarMenu();
 
@@ -31,8 +32,10 @@ public class Main {
                 break;
         }
     }
-    private static void nuevapartida() {
-
+    public static void nuevapartida() {
+        joc.nuevaPartida();
+        tui.mostrarTablero(joc.getTabla(), joc.getTurn());
+        tui.recogerJugada();
     }
 
     private static void cargapartida() {
