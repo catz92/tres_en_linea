@@ -30,23 +30,24 @@ public class TUI {
         return opcion;
     }
 
-    public void mostrarTablero(char tablero[][], short turno) {
+    public void mostrarTablero(char[][] tablero, int turno) {
         for (int i = 0; i < tablero.length; i++) {
-            for (int j = 0; j < tablero.length; j++) {
-                System.out.print(tablero [i][j] + " ");
+            for (int j = 0; j < tablero[i].length; j++) {
+                System.out.print(tablero[i][j] + " ");
             }
-            System.out.println(" ");
+            System.out.println();
         }
-        System.out.println("turno: " + turno);
+        System.out.println("Turno: " + turno);
     }
 
-    public short[] recogerJugada() {
-        short[] ejemplo = new short[2];
+    public int[] recogerJugada() {
+
+        int [] ejemplo = new int[2];
         System.out.println("Fila");
-        short fila;
+        int fila;
         fila = sc.nextShort();
         System.out.println("Columna");
-        short columna;
+        int columna;
         columna = sc.nextShort();
         ejemplo[0]= fila;
         ejemplo[1]= columna;
