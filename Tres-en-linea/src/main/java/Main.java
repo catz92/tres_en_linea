@@ -32,35 +32,26 @@ public class Main {
             tui.mostrarTablero(joc.getTabla(), joc.getTurn());
             int[] jugada = tui.recogerJugada();
 
-
-
             try {
-                joc.jugadaGanadora(jugada[0], jugada[1]);
-
-                tui.mostrarTablero(joc.getTabla(), joc.getTurn());
-
                 int fila = jugada[0];
                 int columna = jugada[1];
+
                 if (joc.getTabla()[fila][columna] != '-') {
-                    System.out.println("posicion ocupada");
-
-
-                    joc.jugar(fila, columna);
-                    ganador = joc.jugadaGanadora(jugada[0], jugada[1]);
+                    System.out.println("Posición ocupada");
+                    continue;
                 }
 
+                joc.jugar(fila, columna);
 
-                if (ganador) {
-                    System.out.println("¡Tenemos un ganador!");
+                if (joc.jugadaGanadora(fila, columna)) {
+                    ganador = true;
+                    tui.mostrarTablero(joc.getTabla(), joc.getTurn());
+                    System.out.println("¡Ganaste!");
                 }
-                else  {
-                    joc.jugar(fila,columna);
 
-                }
             } catch (IllegalArgumentException e) {
                 System.out.println("Error: " + e.getMessage());
             }
-            tui.mostrarTablero(joc.getTabla(), joc.getTurn());
         }
     }
 
