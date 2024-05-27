@@ -3,7 +3,12 @@ import java.util.Scanner;
 public class TUI {
     Scanner sc = new Scanner(System.in);
 
-
+    /**
+     * Muestra el menu principal del juego Tres en raya
+     * y permite al usuario seleccionar una opcion.
+     *
+     * @return La opcion seleccionada por el usuario.
+     */
     public int mostrarMenu() {
         System.out.println("Bienvenidos a Tres en linea");
         System.out.println("Selecciona la opcion deseada");
@@ -30,6 +35,12 @@ public class TUI {
         return opcion;
     }
 
+    /**
+     * Muestra el estado actual del tablero del juego y el turno actual.
+     *
+     * @param tablero El tablero del juego representado como una matriz de caracteres.
+     * @param turno El numero de turno actual en el juego.
+     */
     public void mostrarTablero(char[][] tablero, int turno) {
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero[i].length; j++) {
@@ -40,6 +51,12 @@ public class TUI {
         System.out.println("Turno: " + turno);
     }
 
+    /**
+     * Metodo para recoger la jugada del usuario.
+     *
+     * @return Un array de enteros de longitud 2 donde el primer elemento representa la fila
+     * y el segundo la columna de la jugada.
+     */
     public int[] recogerJugada() {
 
         int [] ejemplo = new int[2];
